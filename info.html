@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensor Documentation</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Button styling for external links */
+        .learn-more-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 6px 12px;
+            background-color: #ecf0f1;
+            color: #2c3e50;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            border: 1px solid #bdc3c7;
+            transition: 0.2s;
+            font-weight: 500;
+        }
+        .learn-more-btn:hover {
+            background-color: var(--accent); /* Uses the blue from your variables */
+            color: white;
+            border-color: var(--accent);
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <header class="header">
+            <h3>📖 Sensor Knowledge Base</h3>
+            <a href="index.html" class="btn btn-nav">⬅️ Back to Dashboard</a>
+        </header>
+
+        <aside class="sidebar">
+            <p><strong>Quick Navigation:</strong></p>
+            <div class="sensor-list">
+                <a href="#dht" style="color:#bdc3c7; text-decoration:none;">1. DHT11 (Temp)</a>
+                <a href="#ultra" style="color:#bdc3c7; text-decoration:none;">2. Ultrasonic</a>
+                <a href="#ldr" style="color:#bdc3c7; text-decoration:none;">3. LDR Light</a>
+                <a href="#pir" style="color:#bdc3c7; text-decoration:none;">4. PIR Motion</a>
+                <a href="#mq2" style="color:#bdc3c7; text-decoration:none;">5. MQ-2 Gas</a>
+                <a href="#soil" style="color:#bdc3c7; text-decoration:none;">6. Soil Moisture</a>
+                <a href="#ir" style="color:#bdc3c7; text-decoration:none;">7. IR Proximity</a>
+                <a href="#bmp" style="color:#bdc3c7; text-decoration:none;">8. BMP180</a>
+                <a href="#rain" style="color:#bdc3c7; text-decoration:none;">9. Rain Sensor</a>
+                <a href="#servo" style="color:#bdc3c7; text-decoration:none;">10. Servo Motor</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <h2>Official Arduino Sensor Guide</h2>
+            <div class="info-grid">
+                
+                <div class="info-item" id="dht">
+                    <h3>1. DHT11 (Temperature & Humidity)</h3>
+                    <p><strong>Working:</strong> It contains a thermistor for temperature and a capacitive humidity sensor. The internal IC converts resistance changes into a digital signal.</p>
+                    <a href="https://docs.arduino.cc/libraries/dht11/" target="_blank" class="learn-more-btn">🔗 Official DHT11 Library</a>
+                </div>
+
+                <div class="info-item" id="ultra">
+                    <h3>2. HC-SR04 (Ultrasonic Distance)</h3>
+                    <p><strong>Working:</strong> Sends a 40kHz ultrasound wave. The time it takes to bounce back determines distance: <em>Distance = (Speed × Time) / 2</em>.</p>
+                    <a href="https://projecthub.arduino.cc/Isaac100/getting-started-with-the-hc-sr04-ultrasonic-sensor-7cabe1" target="_blank" class="learn-more-btn">🔗 HC-SR04 Guide (Project Hub)</a>
+                </div>
+
+                <div class="info-item" id="ldr">
+                    <h3>3. LDR (Light Dependent Resistor)</h3>
+                    <p><strong>Working:</strong> A variable resistor. In the dark, resistance is high; in light, resistance drops. Used with a voltage divider circuit.</p>
+                    <a href="https://projecthub.arduino.cc/electronicsfan123/interfacing-arduino-uno-with-ldr-61f455" target="_blank" class="learn-more-btn">🔗 LDR Tutorial (Project Hub)</a>
+                </div>
+
+                <div class="info-item" id="pir">
+                    <h3>4. PIR (Passive Infrared)</h3>
+                    <p><strong>Working:</strong> Detects infrared radiation (heat) emitted by living beings. A Fresnel lens focuses this IR onto a pyroelectric sensor.</p>
+                    <a href="https://projecthub.arduino.cc/jrachana/how-pir-sensor-works-and-how-to-interface-it-with-arduino-d8c23d" target="_blank" class="learn-more-btn">🔗 PIR Sensor Guide (Project Hub)</a>
+                </div>
+
+                <div class="info-item" id="mq2">
+                    <h3>5. MQ-2 (Gas/Smoke Sensor)</h3>
+                    <p><strong>Working:</strong> Uses a heated sensing element (SnO2). When gas exists, conductivity increases. Can detect LPG, Smoke, and Methane.</p>
+                    <a href="https://projecthub.arduino.cc/RucksikaaR/mq-2-gas-sensor-a-friendly-introduction-9df35f" target="_blank" class="learn-more-btn">🔗 MQ-2 Intro (Project Hub)</a>
+                </div>
+
+                <div class="info-item" id="soil">
+                    <h3>6. Soil Moisture Sensor</h3>
+                    <p><strong>Working:</strong> Measures conductivity between two probes. Wet soil conducts better (low resistance); dry soil conducts poorly (high resistance).</p>
+                    <a href="https://projecthub.arduino.cc/Aswinth/soil-moisture-sensor-with-arduino-91c818" target="_blank" class="learn-more-btn">🔗 Soil Sensor Guide (Project Hub)</a>
+                </div>
+
+                <div class="info-item" id="ir">
+                    <h3>7. IR Proximity Sensor</h3>
+                    <p><strong>Working:</strong> An IR LED emits light. If an object is close, light reflects into the Photodiode. The Op-Amp sets the output pin HIGH.</p>
+                    <a href="https://projecthub.arduino.cc/abhilashpatel121/using-ir-sensor-tcrt-5000-with-arduino-60cc92" target="_blank" class="learn-more-btn">🔗 IR Sensor Guide (Project Hub)</a>
+                </div>
+
+                <div class="info-item" id="bmp">
+                    <h3>8. BMP180 (Barometric Pressure)</h3>
+                    <p><strong>Working:</strong> Uses piezoresistive technology to detect atmospheric pressure. Essential for calculating altitude in drones.</p>
+                    <a href="https://projecthub.arduino.cc/hibit/pressure-and-temperature-measurement-with-gy-68-ff8b67" target="_blank" class="learn-more-btn">🔗 BMP180 Guide (Project Hub)</a>
+                </div>
+
+                <div class="info-item" id="rain">
+                    <h3>9. Rain Sensor Module</h3>
+                    <p><strong>Working:</strong> Similar to soil moisture. Raindrops bridge the nickel traces on the board, lowering resistance and triggering the signal.</p>
+                    <a href="https://projecthub.arduino.cc/webotricks/rain-detection-system-using-arduino-aafbf5" target="_blank" class="learn-more-btn">🔗 Rain Detector (Project Hub)</a>
+                </div>
+
+                <div class="info-item" id="servo">
+                    <h3>10. Servo Motor (SG90)</h3>
+                    <p><strong>Working:</strong> Controlled by PWM (Pulse Width Modulation). The width of the pulse (e.g., 1.5ms) determines the exact angle of the shaft.</p>
+                    <a href="https://docs.arduino.cc/learn/electronics/servo-motors/" target="_blank" class="learn-more-btn">🔗 Official Servo Docs</a>
+                </div>
+
+            </div>
+        </main>
+
+        <footer class="footer">
+            &copy; 2026 Elevate Labs Internship
+        </footer>
+    </div>
+</body>
+</html>

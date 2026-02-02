@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Sensor IoT Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="grid-container">
+        <header class="header">
+            <h3>🎛️ IoT Master Controller</h3>
+            <a href="info.html" class="btn btn-nav">📖 Sensor Guide</a>
+        </header>
+
+        <aside class="sidebar">
+            <div style="margin-bottom: 15px; font-weight: bold; color: white;">Select Active Sensors:</div>
+            
+            <div class="sensor-list">
+                <label class="sensor-option"><input type="checkbox" value="dht11" checked> 🌡️ DHT11 (Temp)</label>
+                <label class="sensor-option"><input type="checkbox" value="ultrasonic" checked> 🦇 Ultrasonic</label>
+                <label class="sensor-option"><input type="checkbox" value="ldr"> ☀️ LDR Light</label>
+                <label class="sensor-option"><input type="checkbox" value="pir"> 🏃 PIR Motion</label>
+                <label class="sensor-option"><input type="checkbox" value="mq2"> 🌫️ MQ-2 Gas</label>
+                <label class="sensor-option"><input type="checkbox" value="soil"> 🌱 Soil Moisture</label>
+                <label class="sensor-option"><input type="checkbox" value="ir"> 🛑 IR Proximity</label>
+                <label class="sensor-option"><input type="checkbox" value="bmp"> 🎈 BMP180 Pressure</label>
+                <label class="sensor-option"><input type="checkbox" value="rain"> 🌧️ Rain Sensor</label>
+                <label class="sensor-option"><input type="checkbox" value="servo"> 🦾 Servo Motor</label>
+            </div>
+            
+            <div style="margin-top: 20px;">
+                <button onclick="simulateAll()" class="btn btn-nav" style="width: 100%">🔄 Refresh Data</button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <h2 id="page-title">Active Sensor Monitor</h2>
+            <div id="dashboard-area" class="dashboard-grid">
+                </div>
+        </main>
+
+        <footer class="footer">
+            &copy; 2026 Elevate Labs Internship Task 11 - B Sharana Basava
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
